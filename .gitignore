@@ -1,0 +1,14 @@
+#Logfiles
+logs/
+.qtenvrc
+.cmdenv-log
+
+#Produced Result files
+results/
+evalVehAmount/Results/
+evalVehAmount/Plots/
+tmp/
+
+#Eval specific files
+modified_*.sumocfg
+modified_*.add.xml

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="hats.net.xml"/>
+        <route-files value="routes/veh.rou.xml,routes/bike.rou.xml"/>
+        <additional-files value="additionals/hats.poly.xml,additionals/hats.obstacles.xml"/>
+    </input>
+    
+    <simulation>
+        <lateral-resolution value="0.3"/>
+    </simulation>
+    
+    <time>
+        <step-length value="0.1"/>
+        <end value="46800"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <ignore-junction-blocker value="15"/>
+        <max-depart-delay value="300"/>
+        <collision.action value="warn"/>
+        <collision.mingap-factor value="0"/>
+    </processing>
+
+    <routing>
+        <routing-algorithm value="dijkstra"/>
+        <device.rerouting.probability value="0.22"/>
+		<device.rerouting.period value="300" />
+		<device.rerouting.threads value="1"/>
+		<device.rerouting.synchronize value="true"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    	<xml-validation value="never"/>
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="additionals/hats.view.xml"/>
+        <start value="0"/>
+    </gui_only>
+
+    <random_number>
+    	<seed value="42"/>
+    </random_number>
+
+</configuration>
